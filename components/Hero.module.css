@@ -39,7 +39,7 @@
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 56px;
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 1;
 }
@@ -286,6 +286,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  padding-top: 68px; /* Aligns the top of the photo with the top of the name heading */
 }
 
 .portraitWrapper {
@@ -405,6 +406,7 @@
 
   .heroVisualCol {
     order: -1;
+    padding-top: 0;
   }
 
   .portraitWrapper {
