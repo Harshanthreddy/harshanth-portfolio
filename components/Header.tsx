@@ -59,7 +59,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenResume, onReplayIntro }) =
         {/* Brand Logo */}
         <a href="#hero" className={styles.logo} aria-label="Duvvuru Harshanth Reddy Home">
           <span className={styles.logoText}>DUVVURU HARSHANTH</span>
-          <span className={styles.logoAccent}> REDDY</span>
+          <span className={styles.logoAccent}>REDDY</span>
         </a>
 
         {/* Desktop Navigation */}

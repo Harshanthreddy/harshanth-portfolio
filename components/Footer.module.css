@@ -57,9 +57,11 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   display: inline-flex;
   align-items: center;
+  gap: 6px;
+  white-space: nowrap;
 }
 
 .logoBracket {
