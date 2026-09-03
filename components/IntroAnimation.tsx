@@ -95,11 +95,11 @@ export const IntroAnimation: React.FC<IntroAnimationProps> = ({
   return (
     <motion.div
       className={styles.introOverlay}
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 1 }}
       animate={{
         opacity: isTransitioning ? 0 : 1,
       }}
-      transition={{ duration: isTransitioning ? 0.85 : 0.4, ease: EASE_SMOOTH_FADE }}
+      transition={{ duration: 0.85, ease: EASE_SMOOTH_FADE }}
       role="dialog"
       aria-modal="true"
       aria-label="Introduction"
