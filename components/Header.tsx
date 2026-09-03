@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeSelector } from './ThemeSelector';
 import { Menu, X, FileText, Sparkles } from 'lucide-react';
@@ -57,8 +58,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenResume, onReplayIntro }) =
     <header className={`${styles.headerWrapper} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.islandBar}>
         {/* Brand Logo */}
-        <a href="#hero" className={styles.logo} aria-label="Duvvuru Harshanth Reddy Home">
-          <span className={styles.logoText}>DUVVURU HARSHANTH</span>
+        <a href="#hero" className={styles.logo} aria-label="Harshanth Reddy Home">
+          <div className={styles.logoIconWrapper}>
+            <Image
+              src="/images/logo.png"
+              alt="HR Monogram"
+              width={30}
+              height={30}
+              priority
+              className={styles.logoImg}
+            />
+          </div>
+          <span className={styles.logoText}>HARSHANTH</span>
           <span className={styles.logoAccent}>REDDY</span>
         </a>
 
