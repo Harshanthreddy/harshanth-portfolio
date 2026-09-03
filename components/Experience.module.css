@@ -1,0 +1,345 @@
+.experienceSection {
+  padding: 100px 0;
+  position: relative;
+}
+
+.timelineWrapper {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto 56px auto;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 24px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary) 0%, var(--border-strong) 100%);
+  z-index: 0;
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.timelineNode {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px var(--accent-glow);
+  z-index: 1;
+  transition: all var(--transition-fast);
+}
+
+.timelineItem:hover .timelineNode {
+  transform: scale(1.08);
+  background: var(--accent-primary);
+  color: var(--text-inverse);
+}
+
+.expCard {
+  flex: 1;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.expCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.tagBadge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: rgba(56, 189, 248, 0.08);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+[data-theme='bright'] .tagBadge,
+[data-theme='light'] .tagBadge {
+  background: rgba(2, 132, 199, 0.08);
+}
+
+.typeBadge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.roleTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.companyName {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.companyName strong {
+  color: var(--accent-primary);
+}
+
+.periodBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bulletList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.checkIcon {
+  color: var(--accent-primary);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.skillsFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.skillsLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.skillPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skillPill {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.skillPill:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* Hackathon Banner */
+.hackathonBanner {
+  max-width: 980px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(99, 102, 241, 0.08) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.hackathonContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.trophyWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+}
+
+.hackathonTag {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #f59e0b;
+  margin-bottom: 6px;
+}
+
+.hackathonTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.hackathonDesc {
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .experienceSection {
+    padding: 60px 0;
+  }
+
+  .timelineLine {
+    left: 17px;
+  }
+
+  .timelineItem {
+    gap: 14px;
+  }
+
+  .timelineNode {
+    width: 36px;
+    height: 36px;
+  }
+
+  .expCard {
+    padding: 20px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .roleTitle {
+    font-size: 1.12rem;
+  }
+
+  .bulletItem {
+    font-size: 0.88rem;
+  }
+
+  .hackathonBanner {
+    padding: 22px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .hackathonContent {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hackathonTitle {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineLine {
+    left: 15px;
+  }
+
+  .timelineNode {
+    width: 30px;
+    height: 30px;
+  }
+
+  .timelineItem {
+    gap: 10px;
+  }
+
+  .expCard {
+    padding: 16px 14px;
+  }
+
+  .periodBadge {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+
+  .skillPill {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+}

@@ -1,0 +1,87 @@
+.floatingBar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-strong);
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+}
+
+.floatingBar:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.barLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  letter-spacing: 0.08em;
+  padding-right: 4px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.swatches {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.swatchBtn:hover {
+  transform: scale(1.15);
+}
+
+.swatchActive {
+  border-color: var(--accent-primary);
+  transform: scale(1.15);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.swatchCircle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swatchDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .floatingBar {
+    bottom: 16px;
+    right: 16px;
+    padding: 4px 8px;
+  }
+}

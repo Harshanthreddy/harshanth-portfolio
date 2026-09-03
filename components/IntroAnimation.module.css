@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Editorial Minimalist Intro Overlay
+   Inspired by Swiss editorial design and quiet luxury
+   ========================================================================== */
+
+.introOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: #fbfbfa; /* Warm off-white / ivory */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: all;
+  cursor: default;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+/* Subtle organic paper warmth feel (no harsh gradient, no heavy texture) */
+.introOverlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(244, 243, 238, 0.6) 100%);
+  pointer-events: none;
+}
+
+.ambientLight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 520px;
+  height: 280px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at 50% 50%, rgba(3, 105, 161, 0.05) 0%, rgba(244, 243, 238, 0.6) 50%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 0;
+  will-change: opacity, transform;
+}
+
+/* Central Composition Stage */
+.stage {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Main Brand Composition: < HARSHANTH /> */
+.composition {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(12px, 2.5vw, 36px);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Developer Code Syntax Brackets */
+.bracket {
+  display: inline-block;
+  font-family: var(--font-sans, 'Inter', -apple-system, sans-serif);
+  font-size: clamp(1.8rem, 4.2vw, 3.8rem);
+  font-weight: 300;
+  color: #111111;
+  letter-spacing: -0.04em;
+  opacity: 0.88;
+  will-change: transform, opacity;
+  user-select: none;
+}
+
+/* The Opening Bracket (<) */
+.bracketLeft {
+  margin-right: clamp(2px, 0.5vw, 8px);
+}
+
+/* The Closing Bracket (/>) */
+.bracketRight {
+  margin-left: clamp(2px, 0.5vw, 8px);
+}
+
+/* Name Typography in Instrument Serif */
+.nameWrapper {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  overflow: visible;
+}
+
+.nameText {
+  font-family: var(--font-editorial, 'Instrument Serif', Georgia, serif);
+  font-size: clamp(2.2rem, 5.2vw, 4.8rem);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111111;
+  line-height: 0.95;
+  will-change: transform, opacity, letter-spacing;
+}
+
+/* Subdued Editorial Skip Control */
+.skipButton {
+  position: absolute;
+  top: clamp(24px, 4vw, 44px);
+  right: clamp(24px, 4vw, 48px);
+  z-index: 10;
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #737373;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, color 0.2s ease;
+  outline: none;
+}
+
+.skipButton:hover {
+  color: #111111;
+}
+
+.skipButton:focus-visible {
+  color: #111111;
+  text-decoration: underline;
+}
+
+/* Mobile & Tablet Adjustments */
+@media (max-width: 640px) {
+  .stage {
+    padding: 16px;
+  }
+
+  .composition {
+    gap: clamp(4px, 1.8vw, 10px);
+    max-width: 100%;
+  }
+
+  .bracket {
+    font-size: clamp(1.1rem, 4.2vw, 1.7rem);
+  }
+
+  .bracketLeft {
+    margin-right: 2px;
+  }
+
+  .bracketRight {
+    margin-left: 2px;
+  }
+
+  .nameText {
+    font-size: clamp(1.25rem, 5vw, 2rem);
+    letter-spacing: 0.05em;
+  }
+
+  .skipButton {
+    top: 18px;
+    right: 18px;
+    font-size: 11px;
+    padding: 8px 14px;
+    min-height: 40px;
+    min-width: 48px;
+  }
+}
+
+@media (max-width: 380px) {
+  .composition {
+    gap: 3px;
+  }
+
+  .bracket {
+    font-size: clamp(0.95rem, 3.8vw, 1.25rem);
+  }
+
+  .nameText {
+    font-size: clamp(1.05rem, 4.2vw, 1.35rem);
+    letter-spacing: 0.03em;
+  }
+}
+
+/* Accessible Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .introOverlay {
+    display: none !important;
+  }
+}

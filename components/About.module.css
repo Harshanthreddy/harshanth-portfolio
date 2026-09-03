@@ -1,0 +1,313 @@
+.aboutSection {
+  padding: 100px 0;
+  position: relative;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.bentoTile {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.bentoTile:hover {
+  border-color: var(--border-strong);
+}
+
+.tileBio {
+  grid-column: 1;
+}
+
+.tileHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tileIconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme='bright'] .tileIconWrap,
+[data-theme='light'] .tileIconWrap {
+  background: rgba(2, 132, 199, 0.1);
+}
+
+.tileTag {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+}
+
+.bioHeading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.bioText {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.bioText strong {
+  color: var(--text-primary);
+}
+
+.bioActionRow {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Stats Tile */
+.tileStats {
+  grid-column: 2;
+}
+
+.statsInnerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  height: 100%;
+}
+
+.statMiniCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.statMiniCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accent-primary);
+}
+
+.statTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.statIconBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme='bright'] .statIconBadge,
+[data-theme='light'] .statIconBadge {
+  background: rgba(2, 132, 199, 0.08);
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.statDetail {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Tile Highlights */
+.tileHighlights {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.highlightList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.checkIcon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.missionQuote {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid var(--accent-primary);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Terminal Section */
+.terminalSection {
+  margin-top: 56px;
+}
+
+.terminalHeaderWrap {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.terminalTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-top: 10px;
+  color: var(--text-primary);
+}
+
+.terminalSub {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  max-width: 620px;
+  margin: 8px auto 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tileBio,
+  .tileStats,
+  .tileHighlights {
+    grid-column: 1;
+  }
+
+  .tileHighlights {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .aboutSection {
+    padding: 60px 0;
+  }
+
+  .bentoGrid {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .bentoTile {
+    padding: 20px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .statsInnerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .statMiniCard {
+    padding: 14px 12px;
+  }
+
+  .statNumber {
+    font-size: 1.3rem;
+  }
+
+  .statLabel {
+    font-size: 0.8rem;
+  }
+
+  .highlightList {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .missionQuote {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+
+  .terminalSection {
+    margin-top: 36px;
+  }
+
+  .terminalTitle {
+    font-size: 1.3rem;
+  }
+
+  .terminalSub {
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .statsInnerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bioHeading {
+    font-size: 1.15rem;
+  }
+
+  .bioText {
+    font-size: 0.88rem;
+  }
+}

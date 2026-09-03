@@ -1,0 +1,60 @@
+.selectorWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.themeToggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.themeToggleBtn:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='bright'] .themeToggleBtn:hover,
+[data-theme='light'] .themeToggleBtn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moonIcon {
+  color: #38bdf8;
+}
+
+.sunIcon {
+  color: #f59e0b;
+}
+
+.themeLabel {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .themeLabel {
+    display: none;
+  }
+  .themeToggleBtn {
+    padding: 7px;
+  }
+}
