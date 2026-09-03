@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           <div className={styles.headingGroup}>
             <span className={styles.greetingText}>HELLO, WORLD! I AM</span>
             <h1 className={styles.mainTitle}>
-              HARSHANTH <span className={styles.titleSurname}>REDDY</span>
+              DUVVURU HARSHANTH <span className={styles.titleSurname}>REDDY</span>
               <span className={styles.titleAccent}>.</span>
             </h1>
           </div>

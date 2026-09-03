@@ -57,8 +57,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenResume, onReplayIntro }) =
     <header className={`${styles.headerWrapper} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.islandBar}>
         {/* Brand Logo */}
-        <a href="#hero" className={styles.logo} aria-label="Harshanth Reddy Home">
-          <span className={styles.logoText}>HARSHANTH</span>
+        <a href="#hero" className={styles.logo} aria-label="Duvvuru Harshanth Reddy Home">
+          <span className={styles.logoText}>DUVVURU HARSHANTH</span>
           <span className={styles.logoAccent}> REDDY</span>
         </a>
 

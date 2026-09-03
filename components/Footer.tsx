@@ -27,8 +27,8 @@ export const Footer: React.FC = () => {
         {/* Footer Main */}
         <div className={styles.footerMain}>
           <div className={styles.footerBrand}>
-            <a href="#hero" className={styles.footerLogo}>
-              <span className={styles.logoText}>HARSHANTH</span>
+            <a href="#hero" className={styles.footerLogo} aria-label="Duvvuru Harshanth Reddy Home">
+              <span className={styles.logoText}>DUVVURU HARSHANTH</span>
               <span className={styles.logoAccent}> REDDY</span>
             </a>
             <p className={styles.footerTagline}>

@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {showIntro && <IntroAnimation name="HARSHANTH REDDY" onComplete={handleIntroComplete} />}
+      {showIntro && <IntroAnimation name="DUVVURU HARSHANTH REDDY" onComplete={handleIntroComplete} />}
       <ScrollProgress />
       <Header
         onOpenResume={() => setIsResumeOpen(true)}

@@ -20,7 +20,7 @@ const EASE_SMOOTH_IN = [0.16, 1, 0.3, 1] as const;
 const EASE_SMOOTH_FADE = [0.25, 0.1, 0.25, 1] as const;
 
 export const IntroAnimation: React.FC<IntroAnimationProps> = ({
-  name = 'HARSHANTH REDDY',
+  name = 'DUVVURU HARSHANTH REDDY',
   onComplete,
 }) => {
   // Phases:
